@@ -1,4 +1,4 @@
-function u()
+
 	local UI = "https://pastebin.com/raw/"
 
 	local Library = loadstring(game:HttpGet(UI.."Zv1JR1SX"))()
@@ -300,5 +300,3 @@ function u()
 		end)
 	end
 	Library:Notify("Demon Soul Simulator x fenril Hub Success !", 5) -- Text, Time
-end
-u()
