@@ -1,11 +1,3 @@
-if placeId == 8069117419 then
-    DemonSoulSimulator = true
-else
-    game.Players.LocalPlayer:Kick("มึงรันสคริปต์ผิดหาโคตรพ่อมึงหรอเดี๋ยวกูแบนแมร่ง ไอควายโง่จริงๆ")
-    wait(3)
-    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
-end
-
 function u()
 	local UI = "https://pastebin.com/raw/"
 
