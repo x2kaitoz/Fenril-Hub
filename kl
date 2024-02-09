@@ -2,12 +2,6 @@ getgenv().Webhook = "https://discord.com/api/webhooks/1127302542754324490/PDXsfG
 local FenrilHub_KingLegacyKaitun = {}
 function FenrilHub_KingLegacyKaitun:RUN()
     repeat task.wait() warn("FENRIL HUB KING LEGACY KAITUN MODE LOADED ... !") until game:IsLoaded() 
-    local placeId = game.PlaceId
-    if placeId == 4520749081 then
-        First = true elseif placeId == 6381829480 then Second = true elseif placeId == 5931540094 then Raid = true elseif placeId == 6596144663 then Awakeworld = true 
-    else
-        LocalPlayer:Kick("Invalid PlaceId.") wait(3) game:GetService("TeleportService"):Teleport(game.PlaceId, LocalPlayer)
-    end
 
     -- if game:IsLoaded() then
 	-- 	local UserInputService = game:GetService("UserInputService")
@@ -148,6 +142,13 @@ function FenrilHub_KingLegacyKaitun:RUN()
 
     local CD_Attack = 0
     local FunctionTask = {}
+
+    local placeId = game.PlaceId
+    if placeId == 4520749081 then
+        First = true elseif placeId == 6381829480 then Second = true elseif placeId == 5931540094 then Raid = true elseif placeId == 6596144663 then Awakeworld = true 
+    else
+        LocalPlayer:Kick("Invalid PlaceId.") wait(3) game:GetService("TeleportService"):Teleport(game.PlaceId, LocalPlayer)
+    end
 
     -- Functions
     local function GetToolFromTip(Tip)
