@@ -2,109 +2,109 @@ local FenrilHub_KingLegacy = {}
 function FenrilHub_KingLegacy:RUN()
 	repeat task.wait() warn("FENRIL HUB KING LEGACY LOADED ... !") until game:IsLoaded() 
 
-	if game:IsLoaded() then
-		local UserInputService = game:GetService("UserInputService")
-		local TweenService = game:GetService("TweenService")
-		local LocalPlayer = game:GetService("Players").LocalPlayer
+	-- if game:IsLoaded() then
+	-- 	local UserInputService = game:GetService("UserInputService")
+	-- 	local TweenService = game:GetService("TweenService")
+	-- 	local LocalPlayer = game:GetService("Players").LocalPlayer
 		
-		local UILibrary = Instance.new("ScreenGui")
-		local Load = Instance.new("Frame")
-		local LoadButton = Instance.new("ImageButton")
+	-- 	local UILibrary = Instance.new("ScreenGui")
+	-- 	local Load = Instance.new("Frame")
+	-- 	local LoadButton = Instance.new("ImageButton")
 		
-		UILibrary.Name = "UILibrary"
-		UILibrary.Parent = game:GetService("CoreGui")
-		UILibrary.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	-- 	UILibrary.Name = "UILibrary"
+	-- 	UILibrary.Parent = game:GetService("CoreGui")
+	-- 	UILibrary.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 		
-		Load.Name = "Load"
-		Load.Parent = UILibrary
-		Load.Active = true
-		Load.AnchorPoint = Vector2.new(0.5, 0.5)
-		Load.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-		Load.BackgroundTransparency = 1
-		Load.BorderSizePixel = 0
-		Load.BackgroundTransparency = 1
+	-- 	Load.Name = "Load"
+	-- 	Load.Parent = UILibrary
+	-- 	Load.Active = true
+	-- 	Load.AnchorPoint = Vector2.new(0.5, 0.5)
+	-- 	Load.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+	-- 	Load.BackgroundTransparency = 1
+	-- 	Load.BorderSizePixel = 0
+	-- 	Load.BackgroundTransparency = 1
 		
-		local uitoggled = false
-		UserInputService.InputBegan:Connect(function(io, p)
-			if io.KeyCode == Enum.KeyCode.RightControl then
-				if uitoggled == false then
-					uitoggled = true
-					UILibrary.Enabled = false
-				else
-					UILibrary.Enabled = true
-					uitoggled = false
-				end
-			end
-		end)
+	-- 	local uitoggled = false
+	-- 	UserInputService.InputBegan:Connect(function(io, p)
+	-- 		if io.KeyCode == Enum.KeyCode.RightControl then
+	-- 			if uitoggled == false then
+	-- 				uitoggled = true
+	-- 				UILibrary.Enabled = false
+	-- 			else
+	-- 				UILibrary.Enabled = true
+	-- 				uitoggled = false
+	-- 			end
+	-- 		end
+	-- 	end)
 		
-		local Blur = Instance.new("BlurEffect")
+	-- 	local Blur = Instance.new("BlurEffect")
 		
-		Blur.Size = 0
-		Blur.Parent = game.Lighting
+	-- 	Blur.Size = 0
+	-- 	Blur.Parent = game.Lighting
 		
-		if game.Workspace.Camera.FieldOfView == 50 then
-			return game.Workspace.Camera.FieldOfView == 70
-		end
+	-- 	if game.Workspace.Camera.FieldOfView == 50 then
+	-- 		return game.Workspace.Camera.FieldOfView == 70
+	-- 	end
 		
-		local LoadText = Instance.new("Frame")
-		local UIListLayoutLoadText = Instance.new("UIListLayout")
-		local TitleLoad = Instance.new("TextLabel")
+	-- 	local LoadText = Instance.new("Frame")
+	-- 	local UIListLayoutLoadText = Instance.new("UIListLayout")
+	-- 	local TitleLoad = Instance.new("TextLabel")
 		
-		LoadText.Name = "LoadText"
-		LoadText.Parent = Load
-		LoadText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-		LoadText.BackgroundTransparency = 1.000
-		LoadText.Size = UDim2.new(0, 500, 0, 50)
-		LoadText.ClipsDescendants = true
+	-- 	LoadText.Name = "LoadText"
+	-- 	LoadText.Parent = Load
+	-- 	LoadText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	-- 	LoadText.BackgroundTransparency = 1.000
+	-- 	LoadText.Size = UDim2.new(0, 500, 0, 50)
+	-- 	LoadText.ClipsDescendants = true
 		
-		UIListLayoutLoadText.Name = "UIListLayoutLoadText"
-		UIListLayoutLoadText.Parent = LoadText
-		UIListLayoutLoadText.FillDirection = Enum.FillDirection.Horizontal
-		UIListLayoutLoadText.HorizontalAlignment = Enum.HorizontalAlignment.Center
-		UIListLayoutLoadText.SortOrder = Enum.SortOrder.LayoutOrder
+	-- 	UIListLayoutLoadText.Name = "UIListLayoutLoadText"
+	-- 	UIListLayoutLoadText.Parent = LoadText
+	-- 	UIListLayoutLoadText.FillDirection = Enum.FillDirection.Horizontal
+	-- 	UIListLayoutLoadText.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	-- 	UIListLayoutLoadText.SortOrder = Enum.SortOrder.LayoutOrder
 		
-		function LoadFunction()
-			print("Starts Scripr Premium.")
-			TweenService:Create(game.Workspace.Camera,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{FieldOfView = 50}):Play()
+	-- 	function LoadFunction()
+	-- 		print("Starts Scripr Premium.")
+	-- 		TweenService:Create(game.Workspace.Camera,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{FieldOfView = 50}):Play()
 		
-			TweenService:Create(Blur,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = 20}):Play()
+	-- 		TweenService:Create(Blur,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = 20}):Play()
 		
-			TweenService:Create(Load,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Position = UDim2.new(0.5, 0, 0.5, 0)}):Play()
+	-- 		TweenService:Create(Load,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Position = UDim2.new(0.5, 0, 0.5, 0)}):Play()
 		
-			TweenService:Create(Load,TweenInfo.new(.4, Enum.EasingStyle.Quart, Enum.EasingDirection.In),{BackgroundTransparency = 0}):Play()
+	-- 		TweenService:Create(Load,TweenInfo.new(.4, Enum.EasingStyle.Quart, Enum.EasingDirection.In),{BackgroundTransparency = 0}):Play()
 		
-			wait(.5)
-			TweenService:Create(LoadButton,TweenInfo.new(.4, Enum.EasingStyle.Quart, Enum.EasingDirection.In),{ImageTransparency = 0}):Play()
+	-- 		wait(.5)
+	-- 		TweenService:Create(LoadButton,TweenInfo.new(.4, Enum.EasingStyle.Quart, Enum.EasingDirection.In),{ImageTransparency = 0}):Play()
 		
-			LoadButton.MouseEnter:Connect(function()
-				TweenService:Create(LoadButton,TweenInfo.new(.2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = UDim2.new(0, 80, 0, 80)}):Play()
-			end)
+	-- 		LoadButton.MouseEnter:Connect(function()
+	-- 			TweenService:Create(LoadButton,TweenInfo.new(.2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = UDim2.new(0, 80, 0, 80)}):Play()
+	-- 		end)
 		
-			LoadButton.MouseLeave:Connect(function()
-				TweenService:Create(LoadButton,TweenInfo.new(.2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = UDim2.new(0, 70, 0, 70)}):Play()
-			end)
+	-- 		LoadButton.MouseLeave:Connect(function()
+	-- 			TweenService:Create(LoadButton,TweenInfo.new(.2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = UDim2.new(0, 70, 0, 70)}):Play()
+	-- 		end)
 		
-			local LoadFocus = false
-			print("Loading Interface .. !")
-			if LoadFocus == false then
-				LoadFocus = true
-				TweenService:Create(LoadButton,TweenInfo.new(.2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Rotation = 180}):Play()
-				TweenService:Create(LoadButton,TweenInfo.new(.4, Enum.EasingStyle.Quart, Enum.EasingDirection.In),{ImageTransparency = 1}):Play()
-				wait(.5)
-				LoadButton:Destroy()
+	-- 		local LoadFocus = false
+	-- 		print("Loading Interface .. !")
+	-- 		if LoadFocus == false then
+	-- 			LoadFocus = true
+	-- 			TweenService:Create(LoadButton,TweenInfo.new(.2, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Rotation = 180}):Play()
+	-- 			TweenService:Create(LoadButton,TweenInfo.new(.4, Enum.EasingStyle.Quart, Enum.EasingDirection.In),{ImageTransparency = 1}):Play()
+	-- 			wait(.5)
+	-- 			LoadButton:Destroy()
 		
-				local Alphes = loadstring(game:HttpGet('https://alphes.net/Files/Notifier.lua'))()
-				Alphes:Notifier("SCRIPT KING LEGACY LOADED COMPLETE . . . ! ",2) wait(2.3)
-				Alphes:Notifier("DEVELOPER : KAITO KUNG",2)
+	-- 			local Alphes = loadstring(game:HttpGet('https://alphes.net/Files/Notifier.lua'))()
+	-- 			Alphes:Notifier("SCRIPT KING LEGACY LOADED COMPLETE . . . ! ",2) wait(2.3)
+	-- 			Alphes:Notifier("DEVELOPER : KAITO KUNG",2)
 		
-				wait(2)
-				TweenService:Create(Load,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Position = UDim2.new(0.5, 0, 0.025, 0)}):Play()
-				TweenService:Create(Blur,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = 0}):Play()
-				TweenService:Create(game.Workspace.Camera,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{FieldOfView = 70}):Play()
-			end
-		end
-		LoadFunction()
-	end
+	-- 			wait(2)
+	-- 			TweenService:Create(Load,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Position = UDim2.new(0.5, 0, 0.025, 0)}):Play()
+	-- 			TweenService:Create(Blur,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{Size = 0}):Play()
+	-- 			TweenService:Create(game.Workspace.Camera,TweenInfo.new(.4, Enum.EasingStyle.Back, Enum.EasingDirection.InOut),{FieldOfView = 70}):Play()
+	-- 		end
+	-- 	end
+	-- 	LoadFunction()
+	-- end
 
     local GetService = function(serviceName) return game:GetService(serviceName) end
 	local Workspace = game:GetService("Workspace")
