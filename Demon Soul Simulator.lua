@@ -441,7 +441,6 @@ function FenrilHub_DSoul:RUN()
 			ReplicatedStorage.RemoteEvents.Setting:FireServer(unpack(args))
 		end	
 
-
 		--[maxlevel]
 		local data = {
 			MaxRoleLevel = 999,
